@@ -7,7 +7,7 @@ async function main() {
     const movies = await fs.readFile("./moviesDb.txt", "utf-8");
 
     const splitter = new RecursiveCharacterTextSplitter({
-      chunkSize: 100,
+      chunkSize: 300,
       chunkOverlap: 10,
     });
     const chunks = await splitter.splitText(movies);
